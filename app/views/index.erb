@@ -1,0 +1,17 @@
+
+<nav>
+  <%if logged_in?%>
+
+  <a href="/tweets/new">Create Tweet</a>
+  <form action="/logout" method="POST">
+  <input type="submit" name="submit" value="Log Out">
+  </form>
+
+  <p>Welcome, <%=current_user.username%></p>
+
+  <%else%>
+  <a href="/signup"> Sign Up</a>
+  <a href="/login"> Log In</a>
+  <%end%>
+
+</nav>
