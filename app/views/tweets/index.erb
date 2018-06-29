@@ -1,7 +1,9 @@
-<h1>Welcome, <%=current_user.username%></h1>
-<%@tweets.each do |tweet|%>
-<div>
-  <%=tweet.content%>
-</div>
+<h3>Welcome,<%=current_user.username%></h3>
+<%@tweets.each_with_index do |tweet, index|%>
+<ol>
+    <%=index+1%>. <%= tweet.content%>
+</ol>
+
+
 
 <%end%>
